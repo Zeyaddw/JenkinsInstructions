@@ -1,0 +1,15 @@
+To remove any previous Docker images before creating a new one in Jenkins using the Execute Windows batch command, you can use the `docker rmi` command to delete the old image(s). Here's a sample batch command you can use:
+
+```batch
+docker rmi -f your-image-name:old-tag
+```
+
+Replace `your-image-name` with the name of the Docker image you want to remove, and `old-tag` with the tag of the image you want to delete. You can specify multiple `-f` flags to forcefully remove multiple images if needed.
+
+Here's an example that removes multiple images:
+
+```batch
+docker rmi -f your-image-name:old-tag1 your-image-name:old-tag2
+```
+
+You can add this batch command to your Jenkins job script before the step where you build the new Docker image. It will ensure that any previous versions of the Docker image are removed before the new one is created.ngrok http 8080
