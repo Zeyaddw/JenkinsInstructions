@@ -1,0 +1,3 @@
+docker run -d -p 9090:8080 --name my-tomcat-container tomcat:latest
+
+Note: You can modify the port as your needed
